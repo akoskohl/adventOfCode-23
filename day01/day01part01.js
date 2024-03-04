@@ -16,5 +16,9 @@ function readInputfile (inputFile) {
 function calibrateAndSumValues (input) {
     summerizedValues = 0;
     for (let i = 0; i < input.length; i++) {
+        firstDigit = getFirstIntegerFromString(input[i]);
     }
+}
+function getFirstIntegerFromString (string) {
+    return String(string.match(/[0-9]+/)).charAt(0);
 }
