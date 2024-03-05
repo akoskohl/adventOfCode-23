@@ -24,6 +24,7 @@ func readInputFile(filePath string) (string, error) {
 }
 
 func getFirstInt(content string) (int, error) {
+    re := regexp.MustCompile(`\d`)
     if err != nil {
         return 0, err
     }
