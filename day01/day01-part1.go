@@ -22,3 +22,10 @@ func readInputFile(filePath string) (string, error) {
     }
     return string(content), nil
 }
+
+func getFirstInt(content string) (int, error) {
+    if err != nil {
+        return 0, err
+    }
+    return firstInt, nil
+}
