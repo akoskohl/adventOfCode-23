@@ -4,16 +4,25 @@ import (
 	"fmt"
 	"os"
 	"regexp"
+	"strconv"
+	"strings"
 )
 
 var filePath = "day01part01-input.txt"
 // var filePath = "day01part1-test.txt"
 
 func main() {
+    var sum int = 0
     content, err := readInputFile(filePath)
     if err != nil {
         fmt.Println(err)
     }
+
+    lines := strings.Split(content, "\n")
+    for _, line := range lines {
+    }
+    println(sum)
+}
 
 func readInputFile(filePath string) (string, error) {
     content, err := os.ReadFile(filePath)
