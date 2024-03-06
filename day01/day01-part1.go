@@ -40,4 +40,8 @@ func getLastInt(content string) (int, error) {
     lastMatch := matches[len(matches)-1]
     var lastInt int
     _, err := fmt.Sscanf(lastMatch, "%d", &lastInt)
+    if err != nil {
+        return 0, err
+    }
+    return lastInt, nil
 }
