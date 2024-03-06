@@ -20,6 +20,8 @@ func main() {
 
     lines := strings.Split(content, "\n")
     for _, line := range lines {
+        firstInt, _ := getFirstInt(line)
+        lastInt, _ := getLastInt(line)
     }
     println(sum)
 }
