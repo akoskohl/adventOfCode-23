@@ -35,4 +35,9 @@ func getFirstInt(content string) (int, error) {
 }
 
 func getLastInt(content string) (int, error) {
+    re := regexp.MustCompile(`\d`)
+    matches := re.FindAllString(content, -1)
+    lastMatch := matches[len(matches)-1]
+    var lastInt int
+    _, err := fmt.Sscanf(lastMatch, "%d", &lastInt)
 }
