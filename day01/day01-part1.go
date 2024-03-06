@@ -24,6 +24,11 @@ func main() {
         lastInt, _ := getLastInt(line)
         concatenated := fmt.Sprintf("%d%d", firstInt, lastInt)
         concatenatedInt, err := strconv.Atoi(concatenated)
+            if err != nil {
+                fmt.Println(err)
+            }
+        // fmt.Println(line, concatenated)
+        sum += concatenatedInt
     }
     println(sum)
 }
