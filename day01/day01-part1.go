@@ -33,3 +33,6 @@ func getFirstInt(content string) (int, error) {
     }
     return firstInt, nil
 }
+
+func getLastInt(content string) (int, error) {
+}
