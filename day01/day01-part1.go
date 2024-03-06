@@ -25,6 +25,9 @@ func readInputFile(filePath string) (string, error) {
 
 func getFirstInt(content string) (int, error) {
     re := regexp.MustCompile(`\d`)
+    match := re.FindString(content)
+    var firstInt int
+    _, err := fmt.Sscanf(match, "%d", &firstInt)
     if err != nil {
         return 0, err
     }
