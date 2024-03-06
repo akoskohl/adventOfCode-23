@@ -22,6 +22,8 @@ func main() {
     for _, line := range lines {
         firstInt, _ := getFirstInt(line)
         lastInt, _ := getLastInt(line)
+        concatenated := fmt.Sprintf("%d%d", firstInt, lastInt)
+        concatenatedInt, err := strconv.Atoi(concatenated)
     }
     println(sum)
 }
