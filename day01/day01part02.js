@@ -14,3 +14,18 @@ function readInputfile (inputFile) {
 }
 
 }
+function getFirstIntegerFromString (string) {
+    return String(string.match(/[0-9]+/)).charAt(0);
+}
+
+function getLastIntegerFromString (string) {
+    return String(reverseString(string).match(/[0-9]+/)).charAt(0);
+}
+
+function indexOfSubString (input, stringToFind) {
+    return String(input).indexOf(stringToFind);
+}
+
+function reverseString (string) {
+    return string.split("").reverse().join("");
+}
