@@ -16,6 +16,24 @@ function readInputfile (inputFile) {
 }
 
 }
+function getLastWrittenIntegerFromString (string) {
+    lastWrittenInt = '';
+    indexOfLastWrittenInt = -1;
+    
+    for (let i=0; i < numbers.length; i++) {
+        if (string.includes(numbers[i])) {
+            if (indexOfLastWrittenInt < 0) {
+                lastWrittenInt = i+1;
+                indexOfLastWrittenInt = string.lastIndexOf(numbers[i]);
+            }
+            if (indexOfLastWrittenInt < string.lastIndexOf(numbers[i])) {
+                lastWrittenInt = i+1;
+                indexOfLastWrittenInt = string.lastIndexOf(numbers[i]);
+            }
+        }
+    }
+    return lastWrittenInt;
+}
 function getFirstWrittenIntegerFromString (string) {
     firstWrittenInt = '';
     indexOfFirstWrittenInt = -1;
