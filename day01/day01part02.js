@@ -16,6 +16,21 @@ function readInputfile (inputFile) {
 }
 
 }
+function getFirstWrittenIntegerFromString (string) {
+    firstWrittenInt = '';
+    indexOfFirstWrittenInt = -1;
+    
+    for (let i=0; i < numbers.length; i++) {
+        if (string.includes(numbers[i])) {
+            if (indexOfFirstWrittenInt < 0) {
+                firstWrittenInt = i+1;
+                indexOfFirstWrittenInt = indexOfSubString(string, numbers[i]);    
+            }
+        }
+    }
+    return firstWrittenInt;
+}
+        }
 function getFirstIntegerFromString (string) {
     return String(string.match(/[0-9]+/)).charAt(0);
 }
