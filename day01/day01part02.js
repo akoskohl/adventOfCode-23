@@ -3,6 +3,8 @@ const fs = require('fs');
 day = '01'
 inputFile = 'day' + day + 'part' + day + '-input.txt';
 input = [];
+numbers = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+
 calibratedValues = [];
 
 solution();
