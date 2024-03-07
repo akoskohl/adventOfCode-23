@@ -26,6 +26,10 @@ function getFirstWrittenIntegerFromString (string) {
                 firstWrittenInt = i+1;
                 indexOfFirstWrittenInt = indexOfSubString(string, numbers[i]);    
             }
+            if (indexOfFirstWrittenInt > indexOfSubString(string, numbers[i])) {
+                firstWrittenInt = i+1;
+                indexOfFirstWrittenInt = indexOfSubString(string, numbers[i]);    
+            }
         }
     }
     return firstWrittenInt;
